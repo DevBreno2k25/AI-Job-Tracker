@@ -1,0 +1,161 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS (facilita mudar cores depois) */
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --primary: #38bdf8;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --danger: #ef4444;
+}
+
+/* FUNDO */
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* TÍTULO */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+}
+
+/* FORMULÁRIO */
+form {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* INPUTS */
+input,
+select {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: #020617;
+  color: var(--text);
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+/* BOTÃO ADD */
+button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  color: #020617;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* CONTAINER DAS VAGAS */
+#jobs {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* CARD DA VAGA */
+.job {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TÍTULO DA VAGA */
+.job strong {
+  font-size: 1.1rem;
+}
+
+/* STATUS */
+.job span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* BOTÃO DELETE */
+.job button {
+  background: var(--danger);
+  color: white;
+  margin-top: auto;
+}
+
+.job button:hover {
+  opacity: 0.8;
+}
+/* CONTADOR DE VAGAS */
+.counter {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-weight: bold;
+}
+/* Assinatura */
+.signature {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  body {
+    padding: 20px 10px;
+  }
+}

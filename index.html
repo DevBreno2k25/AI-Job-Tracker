@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Job Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <h1>AI Job Tracker</h1>
+    <p class="signature">
+        Built by <strong>Breno Santos</strong> • Web Developer
+    </p>
+
+    <form id="job-form">
+        <input type="text" id="title" placeholder="Job Title" required />
+        <input type="text" id="company" placeholder="Company" required />
+
+        <select id="status">
+            <option value="Applied">Applied</option>
+            <option value="Interview">Interview</option>
+            <option value="Offer">Offer</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+
+        <button type="submit">Add Job</button>
+    </form>
+
+    <p id="counter" class="counter"></p>
+
+    <div id="jobs"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
